@@ -1,0 +1,9 @@
+services:
+  demo:
+    image: infracloudio/csvserver
+    container_name: assignment-part2
+    ports:
+      - "9393:9300"
+    env_file: "csvserver.env"
+    volumes:
+      - /mnt/c/Users/satta/csvserver/solution/inputFile:/csvserver/inputdata
