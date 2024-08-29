@@ -1,5 +1,5 @@
 services:
-  demo:
+  assignment2:
     image: infracloudio/csvserver
     container_name: assignment-part2
     ports:
@@ -7,3 +7,10 @@ services:
     env_file: "csvserver.env"
     volumes:
       - /mnt/c/Users/satta/csvserver/solution/inputFile:/csvserver/inputdata
+  prometheus:
+    image: prom/prometheus:v2.45.2
+    container_name: assignment-part3
+    ports:
+      - "9090:9090"
+    volumes:
+      - /mnt/c/Users/satta/csvserver/solution/prometheus.yml:/etc/prometheus/prometheus.yml
